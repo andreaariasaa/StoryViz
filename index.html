@@ -153,32 +153,32 @@
       .setClassToggle(".img", "active")
       .addTo(controller);
 
-    new ScrollMagic.Scene({triggerElement: "quote1-on"})
-      .setClassToggle(".text2opacity", "active")
+    new ScrollMagic.Scene({triggerElement: "#quote1-on"})
+      .setClassToggle(".callout", "active")
       .addTo(controller);
 
-		new ScrollMagic.Scene({triggerElement: "image1-off"})
-      .setClassToggle(".text3opacity", "deactive")
-      .addTo(controller);
-
-    new ScrollMagic.Scene({triggerElement: "quote1-off"})
-      .setClassToggle("#firstvisualdiv", "deactive")
-      .addTo(controller);
-
-    new ScrollMagic.Scene({triggerElement: "image2-on"})
-      .setClassToggle(".img", "active")
-      .addTo(controller);
-
-    new ScrollMagic.Scene({triggerElement: "quote2-on"})
-      .setClassToggle(".img", "active")
-      .addTo(controller);
-
-    new ScrollMagic.Scene({triggerElement: "image2-off"})
+		new ScrollMagic.Scene({triggerElement: "#image1-off"})
       .setClassToggle(".img", "deactive")
       .addTo(controller);
 
-    new ScrollMagic.Scene({triggerElement: "quote2-off"})
+    new ScrollMagic.Scene({triggerElement: "#quote1-off"})
+      .setClassToggle(".callout", "deactive")
+      .addTo(controller);
+
+    new ScrollMagic.Scene({triggerElement: "#image2-on"})
+      .setClassToggle(".img", "active")
+      .addTo(controller);
+
+    new ScrollMagic.Scene({triggerElement: "#quote2-on"})
+      .setClassToggle(".callout", "active")
+      .addTo(controller);
+
+    new ScrollMagic.Scene({triggerElement: "#image2-off"})
       .setClassToggle(".img", "deactive")
+      .addTo(controller);
+
+    new ScrollMagic.Scene({triggerElement: "#quote2-off"})
+      .setClassToggle(".callout", "deactive")
       .addTo(controller);
 
   </script>
