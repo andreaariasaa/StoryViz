@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="UTF-8" />
     <title>Counting the Causes of Migration</title>
    	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500" rel="stylesheet">
    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+
     <style>
       body {
         background-color: #E4DAC2;
@@ -72,6 +74,7 @@
         }
 
 	  </style>
+    
   </head>
   
   <body>
@@ -142,28 +145,30 @@
     </main><!-- /.container -->
   </body>
 
-<script type="text/javascript">
+  <script type="text/javascript">
+
     var controller = new ScrollMagic.Controller();
 
-    	new ScrollMagic.Scene({triggerElement: "#text1"})
-        	.setClassToggle(".text1opacity", "active")
-        	.addTo(controller);
+    new ScrollMagic.Scene({triggerElement: "#text1"})
+      .setClassToggle(".text1opacity", "active")
+      .addTo(controller);
 
-    	new ScrollMagic.Scene({triggerElement: "#text2"})
-        	.setClassToggle(".text2opacity", "active")
-        	.addTo(controller);
+    new ScrollMagic.Scene({triggerElement: "#text2"})
+      .setClassToggle(".text2opacity", "active")
+      .addTo(controller);
 
 		new ScrollMagic.Scene({triggerElement: "#text3"})
-        	.setClassToggle(".text3opacity", "active")
-        	.addTo(controller);
+      .setClassToggle(".text3opacity", "active")
+      .addTo(controller);
 
-        new ScrollMagic.Scene({triggerElement: "#text4"})
-            .setClassToggle("#firstvisualdiv", "deactive")
-            .addTo(controller);
+    new ScrollMagic.Scene({triggerElement: "#text4"})
+      .setClassToggle("#firstvisualdiv", "deactive")
+      .addTo(controller);
 
-        new ScrollMagic.Scene({triggerElement: "#text5"})
-            .setClassToggle(".img", "active")
-            .addTo(controller);
+    new ScrollMagic.Scene({triggerElement: "#text5"})
+      .setClassToggle(".img", "active")
+      .addTo(controller);
 
-</script>
+  </script>
+
 </html>
