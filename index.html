@@ -35,6 +35,15 @@
       .callout {
         color: #900D09;
         font-size: 30px;
+        transition: opacity 1.2s;
+        -webkit-transition: opacity 1.2s;
+        }
+
+      .callout2 {
+        color: #900D09;
+        font-size: 30px;
+        transition: opacity 1.2s;
+        -webkit-transition: opacity 1.2s;
         }
 
 		  .calloutdiv {
@@ -57,6 +66,15 @@
         }
 
       .img {
+        max-width: 100%;
+        max-height: 100%;
+        position: relative;
+        opacity: 0;
+        transition: opacity 1.2s;
+        -webkit-transition: opacity 1.2s;
+        }
+
+      .img2 {
         max-width: 100%;
         max-height: 100%;
         position: relative;
@@ -129,10 +147,10 @@
 
         <div class="col-8">
           <div class="imagediv">
-            <img class="img" src="https://cdn.theculturetrip.com/wp-content/uploads/2016/09/mit_building_10_and_the_great_dome_cambridge_ma.jpg">
+            <img class="img2" src="https://cdn.theculturetrip.com/wp-content/uploads/2016/09/mit_building_10_and_the_great_dome_cambridge_ma.jpg">
           </div>
           <div class="calloutdiv">
-            <p class="callout"> SOME IMPORTANT QUOTE FROM SIDE TEXT </p>
+            <p class="callout2"> SOME IMPORTANT QUOTE FROM SIDE TEXT </p>
           </div>
         </div>
 
@@ -166,19 +184,19 @@
       .addTo(controller);
 
     new ScrollMagic.Scene({triggerElement: "#image2-on"})
-      .setClassToggle(".img", "active")
+      .setClassToggle(".img2", "active")
       .addTo(controller);
 
     new ScrollMagic.Scene({triggerElement: "#quote2-on"})
-      .setClassToggle(".callout", "active")
+      .setClassToggle(".callout2", "active")
       .addTo(controller);
 
     new ScrollMagic.Scene({triggerElement: "#image2-off"})
-      .setClassToggle(".img", "deactive")
+      .setClassToggle(".img2", "deactive")
       .addTo(controller);
 
     new ScrollMagic.Scene({triggerElement: "#quote2-off"})
-      .setClassToggle(".callout", "deactive")
+      .setClassToggle(".callout2", "deactive")
       .addTo(controller);
 
   </script>
