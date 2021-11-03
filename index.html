@@ -150,7 +150,7 @@
     var controller = new ScrollMagic.Controller();
 
     new ScrollMagic.Scene({triggerElement: "image1-on"})
-      .setClassToggle(".text1opacity", "active")
+      .setClassToggle(".imagediv", "active")
       .addTo(controller);
 
     new ScrollMagic.Scene({triggerElement: "quote1-on"})
@@ -158,7 +158,7 @@
       .addTo(controller);
 
 		new ScrollMagic.Scene({triggerElement: "image1-off"})
-      .setClassToggle(".text3opacity", "active")
+      .setClassToggle(".text3opacity", "deactive")
       .addTo(controller);
 
     new ScrollMagic.Scene({triggerElement: "quote1-off"})
@@ -174,11 +174,11 @@
       .addTo(controller);
 
     new ScrollMagic.Scene({triggerElement: "image2-off"})
-      .setClassToggle(".img", "active")
+      .setClassToggle(".img", "deactive")
       .addTo(controller);
 
     new ScrollMagic.Scene({triggerElement: "quote2-off"})
-      .setClassToggle(".img", "active")
+      .setClassToggle(".img", "deactive")
       .addTo(controller);
 
   </script>
