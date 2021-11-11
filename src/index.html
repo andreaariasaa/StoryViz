@@ -7,8 +7,11 @@
    	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500" rel="stylesheet">
    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-
+    <script src="https://d3js.org/d3.v3.min.js"></script>
     <style>
+      .node {
+        stroke-width: 1.5px;
+      }
       body {
         background-color: #E4DAC2;
         color: #481F01;
@@ -132,9 +135,7 @@
         </div>
 
         <div class="col-8">
-          <div class="imagediv">
-            <img class="img" src="Images/all_cases.png">
-          </div>
+          <div id="viz"></div>
           <br />
           <br />
           <div class="calloutdiv">
@@ -154,9 +155,7 @@
         </div>
 
         <div class="col-8">
-          <div class="imagediv">
-            <img class="img2" src="Images/example1.png">
-          </div>
+          <div id="viz"></div>
           <div class="calloutdiv">
             <p class="callout2"> We use data visualizations to help tell stories about people.  </p>
           </div>
@@ -206,6 +205,66 @@
     new ScrollMagic.Scene({triggerElement: "#quote2-off"})
       .setClassToggle(".callout2", "deactive")
       .addTo(controller);
+
+    var width = 960,
+        height = 500;
+
+    var fill = d3.scale.category10();
+
+    var nodes = d3.range(200).map(function(i) {
+      return {index: i};
+    });
+
+    var force = d3.layout.force()
+        .nodes(nodes)
+        .size([width, height])
+        .on("tick", tick)
+        .start();
+
+    const svg = d3.select("#viz")
+              .append("svg")
+               .attr("viewBox", [0, 0, width, height])
+
+    var node = svg.selectAll(".node")
+        .data(nodes)
+      .enter().append("circle")
+        .attr("class", "node")
+        .attr("cx", function(d) { return d.x; })
+        .attr("cy", function(d) { return d.y; })
+        .attr("r", 8)
+        .style("fill", function(d, i) { return fill(i & 3); })
+        .style("stroke", function(d, i) { return d3.rgb(fill(i & 3)).darker(2); })
+        .call(force.drag)
+        .on("mousedown", function() { d3.event.stopPropagation(); });
+
+    svg.style("opacity", 1e-6)
+      .transition()
+        .duration(1000)
+        .style("opacity", 1);
+
+    d3.select("body")
+        .on("mousedown", mousedown);
+
+    function tick(e) {
+
+      // Push different nodes in different directions for clustering.
+      var k = 6 * e.alpha;
+      nodes.forEach(function(o, i) {
+        o.y += i & 1 ? k : -k;
+        o.x += i & 2 ? k : -k;
+      });
+
+      node.attr("cx", function(d) { return d.x; })
+          .attr("cy", function(d) { return d.y; });
+    }
+
+    function mousedown() {
+      nodes.forEach(function(o, i) {
+        o.x += (Math.random() - .5) * 40;
+        o.y += (Math.random() - .5) * 40;
+      });
+      force.resume();
+    }
 
   </script>
 
