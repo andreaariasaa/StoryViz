@@ -238,7 +238,6 @@ def cooccurence_heatmap_3(df, attribute1, attribute2, split_country=False):
 # Use this function to plot data
 def plot_data(df, attribute, split_country = False):
     type = main_type.loc[main_type['label'] == attribute]['type'].values[0]
-
     if type == 'n':
         plot_distribution(df, attribute, split_country)
     elif type == 'mc':

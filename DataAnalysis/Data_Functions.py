@@ -3,6 +3,9 @@ import numpy as np
 
 lookup = pd.read_excel('Data/survey data look-up table.xlsx', sheet_name='answer_lookup')
 main_type = pd.read_excel('Data/survey data look-up table.xlsx', sheet_name='main_table')
+for type in ['hh','mig_ext', 'mig_int', 'mig_pend']:
+    append_type = pd.read_excel('Data/survey data look-up table.xlsx', sheet_name=f'{type}_roster')
+    main_type = main_type.append(append_type)
 
 
 # Given a dataframe, question, and result, it will

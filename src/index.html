@@ -35,7 +35,26 @@
         line-height:1.3;
 		    }
 
-      .callout {
+        figcaption {
+          font-size: 8px;
+          font-style: italic;
+          padding: 2px;
+          text-align: left;
+        }
+
+        #firstvisualdiv{
+            position: -webkit-sticky;
+            position: sticky;
+            top: -1px;
+            padding: 100px;
+            padding-top: 250px;
+            transition: opacity 0.8s;
+           -webkit-transition: opacity 0.8s;
+           text-align: center;
+
+      	}
+
+      .all-anim {
         color: #900D09;
         font-size: 30px;
         transition: opacity 1.2s;
@@ -43,51 +62,57 @@
         -webkit-transition: opacity 1.2s;
         }
 
-      .callout2 {
+      .income-anim {
         color: #900D09;
         font-size: 30px;
         transition: opacity 1.2s;
-        -webkit-transition: opacity 1.2s;
-        }
-
-		  .calloutdiv {
-        position: -webkit-sticky;
-        position: sticky;
-        top: -1px;
-        padding: 100px;
-        padding-top: 300px;
-        transition: opacity 0.8s;
-        -webkit-transition: opacity 0.8s;
-        text-align: center;
-    	  }
-
-      .imagediv {
-        position: -webkit-sticky;
-        position: sticky;
-        top: -1px;
-        padding: 50px;
-        transition: opacity 0.8s;
-        -webkit-transition: opacity 0.8s;
-        }
-
-      .img {
-        max-width: 100%;
-        max-height: 100%;
-        position: relative;
         opacity: 0;
-        transition: opacity 1.2s;
         -webkit-transition: opacity 1.2s;
         }
-
-      .img2 {
-        max-width: 100%;
-        max-height: 100%;
-        position: relative;
+      .living-anim {
+        color: #900D09;
+        font-size: 30px;
+        transition: opacity 1.2s;
         opacity: 0;
-        transition: opacity 1.2s;
         -webkit-transition: opacity 1.2s;
         }
+      .migrate-anim {
+        color: #900D09;
+        font-size: 30px;
+        transition: opacity 1.2s;
+        opacity: 0;
+        -webkit-transition: opacity 1.2s;
+        }
+      .plans-anim {
+        color: #900D09;
+        font-size: 30px;
+        transition: opacity 1.2s;
+        opacity: 0;
+        -webkit-transition: opacity 1.2s;
+        }
+      .why-anim {
+        color: #900D09;
+        font-size: 30px;
+        transition: opacity 1.2s;
+        opacity: 0;
+        -webkit-transition: opacity 1.2s;
+        }
+        .people-anim {
+          color: #900D09;
+          font-size: 30px;
+          transition: opacity 1.2s;
+          opacity: 0;
+          -webkit-transition: opacity 1.2s;
+          }
 
+
+        .textcallout {
+          color: #900D09;
+          font-size: 30px;
+          transition: opacity 1.2s;
+          opacity: 1;
+          -webkit-transition: opacity 1.2s;
+        }
 	    .active {
         opacity:1;
     	  }
@@ -95,6 +120,8 @@
       .deactive {
         opacity:0;
         }
+
+
 
 	  </style>
 
@@ -115,57 +142,84 @@
           <h6>By Andrea Arias, Jimin Lee, and Keili Tucker</h6>
           <hr>
         </div>
+        <div class="col-12">
+          <p > To be a migrant is to have your life and your story politicized. Fleeing violence or natural disasters, seeking economic opportunities, or moving for a new job in a foreign country becomes a political act rather than a personal one. Over the past decade the number of migrants from Central America to the United States has been steadily increasing and unfortunately, prejudice against migrants and fears over “caravans” of migrants have been increasing alongside. But who are the migrants? What are their stories?   </p>
+          <br />
+        </div>
       </div>
 
       <div class="row">
 
-        <div class="col-4">
-          <p id="image1-on"> There are many reasons people choose to migrate, and understanding those reasons and those choices help us understand the stories of migrants. This article will be focusing on people from Guatemala, Honduras, and El Salvador and examining desires to migrate, experiences of migration and the factors and causes that impact it.  </p>
-          <br><br>
-          <p> Let’s begin by looking at all the households that were interviewed as a part of this survey. A note about the survey, it was conducted by the World Food Program in Guatemala, El Salvador, and Honduras. Each dot represents one household since one person per household was interviewed. For more information about the World Food Program, you can go <a href=”https://www.wfp.org/”>here</a> </p>
-          <br><br>
-          <p id="image1-off"> Our visualization will start with a scrollytelling portion that looks at the household survey responses and will tell a story from the data. We will be looking specifically at income, cost of living, and violence to see how these factors contribute to a desire to move. Obviously this cannot directly state causation, rather we just want to use this as an investigatory tool.</p>
-          <br><br>
-          <p id="quote1-on"> To begin, we will split our data by income into a couple of main income brackets, based on the groupings in the original survey. From there we can look at the two lowest income brackets and further split their income into portions of income. As many respondents received income from multiple sources, this split will give us a better understanding of how people get their money. </p>
-          <br><br>
-          <p> We would see this as two new splits among the household dots to best visualize what the background the households are coming from and understand which households we are focusing on. An important part of our visualization is also to narrow at each level. After looking at income, we can further narrow by cost of living.</p>
-          <br><br>
-          <p id="quote1-off"> We have many questions about cost of living, so we can focus on the questions about cost of housing, important grains, and general cost of food. Now we can focus specifically on households that have lower income and a higher cost of living to see that intersection. </p>
-          <br><br>
+        <div class="col-5">
+          <figure id="all-circles">
+            <img src="../Images/pic1.png" alt="Members of the Ramirez family walk along train tracks in Coatzacoalcos in the Mexican state of Veracruz on March 23, 2021. They fled their home in Santa Barbara, Honduras after their lives were threatened by gang members. Erica Ramirez is nine months pregnant" style="width:100%">
+            <figcaption>Members of the Ramirez family walk along train tracks in Coatzacoalcos in the Mexican state of Veracruz on March 23, 2021. They fled their home in Santa Barbara, Honduras after their lives were threatened by gang members. Erica Ramirez is nine months pregnant. Yael Martínez—Magnum Photos for TIME
+            </figcaption>
+          </figure>
+          <br />
+          <p> Our data comes from a survey of around 5000 households in Guatemala, Honduras, and El Salvador. Many of the respondents have family members who have migrated, considered migrating, or previously attempted to migrate, but many do not. For those who did consider or previously migrated, 83.4% of respondents said their primary motivation was to find better job opportunities. Let’s begin by understanding the current economic opportunities for the households surveyed.</p>
+<br />
+          <p class="textcallout" id="income-satisfaction"> Who are the migrants?  </p>
+<br />
+          <p> Let’s focus on the families who are in the most critical financial condition.</p>
+<br />
+          <figure>
+            <img src="../Images/pic2.png" alt="Mercedes Morales walks through what remains of her home in the village of Aldea El “Coowle, San Manuel Cortes, Honduras, on April 9, 2021. The house was completely destroyed by hurricanes Eta and Iota in November 2020. Yael Martínez—Magnum Photos for TIME" style="width:100%">
+            <figcaption>Mercedes Morales walks through what remains of her home in the village of Aldea El “Coowle, San Manuel Cortes, Honduras, on April 9, 2021. The house was completely destroyed by hurricanes Eta and Iota in November 2020. Yael Martínez—Magnum Photos for TIME
+            </figcaption>
+          </figure>
+<br />
+          <p id="living-condition">We want to understand more than just income level but standard of living in general, so we can split up our remaining households by whether or not their level of income is improving or deteriorating? </p>
+          <p>It’s unsurprising to see that over half the people living at critically low levels of income would have a worsening living condition. To put this number in perspective, about the same percentage of all respondents feel that their living conditions are about the same. We can focus now on the households who have a worse living condition and understand that we are looking at the 340 households who are experiencing the worst economic impacts from our survey.</p>
+          <p class="textcallout">How does this relate to migration? Do these families want to migrate? Can they migrate? </p>
+          <p id="mig_ext_intention">Let’s investigate the first question. “Ideally, if they had the opportunity, would they like to move permanently or for a long period to another country?”</p>
+<br />
+<p>In the whole survey, this question was split roughly 50/50, though that is clearly not the case here. This may make sense given the story that is always told of migrants fleeing a lack of economic opportunity, though the reality is often that many people at this level of instability cannot afford migration. The average cost in USD for those who have attempted to migrate or have family members who have, was around $6000. </p>
+<br />
+<p>Let’s look at the families who want to migrate and see if they are actually able to.</p>
+<br />
+<p id="mig_ext_preparacion">Though not all the families answered this question, we can see that desires don’t always match up with reality. Migrating isn’t as simple as news pundits bemoaning the onslaught of migrants would have viewers believe.</p>
+<figure >
+  <img src="../Images/pic3.png" alt="A train runs along the border between Brownsville, Texas, and Matamoros in the Mexican state of Tamaulipas on May 7, 2021. Yael Martinez—Magnum Photos for TIME" style="width:100%">
+  <figcaption>A train runs along the border between Brownsville, Texas, and Matamoros in the Mexican state of Tamaulipas on May 7, 2021. Yael Martinez—Magnum Photos for TIME
+  </figcaption>
+</figure>
+<p id="mig_int_pref_no_plan">We can try to understand specifically those who want to migrate but haven’t started planning. We can now see beyond the large number of migrants and understand the five households with critically low levels of income, who’s living condition has not been improving, who want to migrate but haven’t been able to due to a lack of resources to buy another house.</p>
+<p>Or we can understand the two similar families who don’t want to leave their friends and family and thus haven’t planned to migrate.
+</p>
+<p>We can imagine their stories as more than dots or more than political controversy in the US. Every dot here is a household with a story and life. </p>
+<figure >
+  <img src="../Images/pic4.png" alt="Cyndy Caceres, 28, and her four-year-old son pose for a portrait on May 4, 2021 in Reynosa in the Mexican state of Tamaulipas, a city across the border from McAllen, Texas, that has seen thousands of migrants arrive hoping to claim asylum in the U.S. Yael Martinez—Magnum Photos for TIME" style="width:100%">
+  <figcaption>Cyndy Caceres, 28, and her four-year-old son pose for a portrait on May 4, 2021 in Reynosa in the Mexican state of Tamaulipas, a city across the border from McAllen, Texas, that has seen thousands of migrants arrive hoping to claim asylum in the U.S. Yael Martinez—Magnum Photos for TIME
+  </figcaption>
+</figure>
+<p id="end"></p>
         </div>
 
-        <div class="col-8">
-          <div id="viz"></div>
-          <br />
-          <br />
-          <div class="calloutdiv">
-            <p class="callout"> We would see this as two new splits among the household dots </p>
+        <div class="col-7">
+          <div id="firstvisualdiv">
+              <p class="all-anim"> We see the big circle with all the dots </p>
+            </div>
+            <div id="firstvisualdiv">
+              <p class="income-anim"> We split by income satisfaction into sub circles </p>
+            </div>
+            <div id="firstvisualdiv">
+              <p class="living-anim"> We zoom on the circle of lowest income and split further by living condition </p>
+            </div>
+            <div id="firstvisualdiv">
+              <p class="migrate-anim"> We zoom on the circle of worse living condition and split further by whether or not the families want to migrate </p>
+            </div>
+            <div id="firstvisualdiv">
+              <p class="plans-anim"> We look at families who do want to migrate and split by plans to migrate </p>
+            </div>
+            <div id="firstvisualdiv">
+              <p class="why-anim"> We look at families who don't have plans and split by why they don't </p>
+            </div>
           </div>
         </div>
+        <div class="row">
 
-        <div class="col-4">
-          <p id="image2-on">The new visualization could look something like this image. Of course the actual labels for the data would be different and specific to cost of living in this case, but the idea of using dots to visualize the differences between respondents will be the same.</p>
-          <br><br>
-          <p id="quote2-on"> Our next step would be to add one more level of survey data, this time looking at how these impacts affect desire to migrate. Given the households we are currently looking at, we can split them a couple times. Once to see how many families wanted to move and once to see how many families had tried in the past three years. </p>
-          <br><br>
-          <p id="image2-off"> From here, we want to make sure that our data visualization doesn’t lose the human element. We use data visualizations to help tell stories about people. The end of the scrollytelling could likely be a case study about a specific household from this group to learn more about the family structure, country of origin, and other traits to help refocus the project.</p>
-          <br><br>
-          <p id="quote2-off">We may also include maps alongside our project, such as the one below that helps show where significant acts of violence happen across the northern triangle. If we also split the respondents by country, this map could help understand of local violence impacts migration.</p>
-          <br><br>
         </div>
-
-        <div class="col-8">
-          <div id="viz"></div>
-          <div class="calloutdiv">
-            <p class="callout2"> We use data visualizations to help tell stories about people.  </p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="row">
-        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~ariasa/1.embed" height="525" width="100%"></iframe>
-      </div>
 
     </main><!-- /.container -->
   </body>
@@ -174,98 +228,42 @@
 
     var controller = new ScrollMagic.Controller();
 
-    new ScrollMagic.Scene({triggerElement: "#image1-on"})
-      .setClassToggle(".img", "active")
+    new ScrollMagic.Scene({triggerElement: "#all-circles"})
+      .setClassToggle(".all-anim", "active")
       .addTo(controller);
-
-    new ScrollMagic.Scene({triggerElement: "#quote1-on"})
-      .setClassToggle(".callout", "active")
+    new ScrollMagic.Scene({triggerElement: "#income-satisfaction"})
+      .setClassToggle(".all-anim", "deactive")
       .addTo(controller);
-
-		new ScrollMagic.Scene({triggerElement: "#image1-off"})
-      .setClassToggle(".img", "deactive")
+    new ScrollMagic.Scene({triggerElement: "#income-satisfaction"})
+      .setClassToggle(".income-anim", "active")
       .addTo(controller);
-
-    new ScrollMagic.Scene({triggerElement: "#quote1-off"})
-      .setClassToggle(".callout", "deactive")
+    new ScrollMagic.Scene({triggerElement: "#living-condition"})
+      .setClassToggle(".income-anim", "deactive")
       .addTo(controller);
-
-    new ScrollMagic.Scene({triggerElement: "#image2-on"})
-      .setClassToggle(".img2", "active")
+    new ScrollMagic.Scene({triggerElement: "#living-condition"})
+      .setClassToggle(".living-anim", "active")
       .addTo(controller);
-
-    new ScrollMagic.Scene({triggerElement: "#quote2-on"})
-      .setClassToggle(".callout2", "active")
+    new ScrollMagic.Scene({triggerElement: "#mig_ext_intention"})
+      .setClassToggle(".living-anim", "deactive")
       .addTo(controller);
-
-    new ScrollMagic.Scene({triggerElement: "#image2-off"})
-      .setClassToggle(".img2", "deactive")
+    new ScrollMagic.Scene({triggerElement: "#mig_ext_intention"})
+      .setClassToggle(".migrate-anim", "active")
       .addTo(controller);
-
-    new ScrollMagic.Scene({triggerElement: "#quote2-off"})
-      .setClassToggle(".callout2", "deactive")
+    new ScrollMagic.Scene({triggerElement: "#mig_ext_preparacion"})
+      .setClassToggle(".migrate-anim", "deactive")
       .addTo(controller);
-
-    var width = 960,
-        height = 500;
-
-    var fill = d3.scale.category10();
-
-    var nodes = d3.range(200).map(function(i) {
-      return {index: i};
-    });
-
-    var force = d3.layout.force()
-        .nodes(nodes)
-        .size([width, height])
-        .on("tick", tick)
-        .start();
-
-    const svg = d3.select("#viz")
-              .append("svg")
-               .attr("viewBox", [0, 0, width, height])
-
-    var node = svg.selectAll(".node")
-        .data(nodes)
-      .enter().append("circle")
-        .attr("class", "node")
-        .attr("cx", function(d) { return d.x; })
-        .attr("cy", function(d) { return d.y; })
-        .attr("r", 8)
-        .style("fill", function(d, i) { return fill(i & 3); })
-        .style("stroke", function(d, i) { return d3.rgb(fill(i & 3)).darker(2); })
-        .call(force.drag)
-        .on("mousedown", function() { d3.event.stopPropagation(); });
-
-    svg.style("opacity", 1e-6)
-      .transition()
-        .duration(1000)
-        .style("opacity", 1);
-
-    d3.select("body")
-        .on("mousedown", mousedown);
-
-    function tick(e) {
-
-      // Push different nodes in different directions for clustering.
-      var k = 6 * e.alpha;
-      nodes.forEach(function(o, i) {
-        o.y += i & 1 ? k : -k;
-        o.x += i & 2 ? k : -k;
-      });
-
-      node.attr("cx", function(d) { return d.x; })
-          .attr("cy", function(d) { return d.y; });
-    }
-
-    function mousedown() {
-      nodes.forEach(function(o, i) {
-        o.x += (Math.random() - .5) * 40;
-        o.y += (Math.random() - .5) * 40;
-      });
-      force.resume();
-    }
-
+    new ScrollMagic.Scene({triggerElement: "#mig_ext_preparacion"})
+      .setClassToggle(".plans-anim", "active")
+      .addTo(controller);
+    new ScrollMagic.Scene({triggerElement: "#mig_int_pref_no_plan"})
+      .setClassToggle(".plans-anim", "deactive")
+      .addTo(controller);
+    new ScrollMagic.Scene({triggerElement: "#mig_int_pref_no_plan"})
+      .setClassToggle(".why-anim", "active")
+      .addTo(controller);
+    new ScrollMagic.Scene({triggerElement: "#end"})
+      .setClassToggle(".why-anim", "deactive")
+      .addTo(controller);
   </script>
 
 </html>
