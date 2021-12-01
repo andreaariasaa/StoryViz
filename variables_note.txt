@@ -1,0 +1,164 @@
+TODO: most important: communicate the narrative, then communicate the data to support
+we want to see some of the bigger population still. keep track of percentage out of total population?
+grey out the dots that don't apply to the question anymore. push them to the side. don't make them disappear.
+or different shades for different question, similar shades for questions that are asked in sequence
+
+important questions: income, motivation to stay/leave, desire plan/prepare
+if we want to include more questions and can't get to the questions, use static graphs. export image, photoshop, etc as png. doesn't have to be the bubbles
+
+focus on presenting it concisely.
+it's ok to include pargraphs of text (like an article)
+- maybe have headlines that are bolded. so that we can understand what's going on just with the headlines. the small text is for people who want to read through the details.
+- headlines can help us verbally present.
+
+focus our time on our narrative
+
+the filtering tool is an 'extra' in this project. don't need to have a dashboard. enough interactivity can happen with the scrolly.
+
+TODO: line 521 change variable d to change the text. look into how to change the font size and style. might be in css or html
+ME TODO: have a backdrop image of the total 5000 grey dots in the background for the dots. plan b: small pie chart in the upper corner
+ME TODO: insert images into html text portion 
+KEILI TODO: percent female, number enrolled??
+ME TODO: plan b: barchart
+ME TODO: read through the html texgt
+ME TODO: google search scrolling too quick and transitions breaking
+ME TODO: ask ashley about simplfying to larger bubbles 
+ME TODO: ask ashley final project due date (and if we can go on wednesday PLEASE)
+
+migrant_id: unique by responder
+
+
+INCLUDE:
+household_income_feeling: Which of these statements is closest to how you feel about your household income these days? (13.5)
+                0: living comfortably
+                1: surviving
+                2: struggling
+                3: in a very critical situation TODO: if certain categories have too little data points, combine with similar category
+                4: not sure/no response
+
+INCLUDE:
+migration_want: Ideally, if they had the opportunity, would they like to move permanently or for a long period to another country? (3.1)
+                representation:
+                no: 0
+                yes: 1
+                not sure/no response: 2
+
+INCLUDE:
+planning_to_move12: Are you planning to move to another country in the next 12 months? (3.3)
+                no: 0
+                yes: 1
+                not sure/no response: 2
+
+INCLUDE:
+prepared_to_move: Have you made any preparation to move to another country? (3.5)
+                no: 0
+                yes: 1
+                not sure/no response: 2
+
+INCLUDE:
+why_no_leave: (total 7 people responded no to 3.5) What are the main reasons why you have not planned to move to another part of the country in the next 12 months? (multiple choice, total response:7)? (3.4)
+                num(Fear of insecurity): 1
+                num(Fear of COVID): 2
+                num(Not enough resources to pay for a house in destination country): 5
+                num(Not enough resources to pay for living conditions in another part of the country (services, transportation, food, health, etc.)): 2
+                num(Not enough resources to pay for the migration): 2
+                num(I don't want to abandon my family and / or friends): 2
+                num(Other): 1
+
+area_econ_improve: Right now, do you think that the economic conditions in the area where you live are getting better or worse? (13.2) TODO
+                0: 0 TODO: what does 0 mean here. answer: 0 if it's not in the look up table. can ask rosella to be exact. 
+                1: worse
+                2: remains same
+                3: getting better
+                4: not sure/no response 
+
+
+living_standard_improve: Do they feel like their standard of living is improving or deterioriating? (13.3)
+                representation:
+                worse: 0
+                remains same: 1
+                getting better: 2
+                not sure/no response: 3
+
+first_worry: What are you most worried about right now? (12.2.2)
+                0: Fear of contagion of COVID-19
+                1: Limitations or restrictions on mobility due to COVID-19
+                2: Can't afford to buy food
+                3: Lack of work/unemployment
+                4: Insecurity/violence
+                5: Difficulty paying rent/loan
+                6: Interruption/irregularity in educational services
+                7: Interruption of medical services
+                8: Medicines shortage
+                9: Public transport shortage
+                10: Lack of water
+                11: Persecution/discrimination
+                12: Fear of facing a natural threat (hurricanes, volcanic eruptions, plagues, etc.)
+                13: Other
+                14: No worries
+
+violence_increase: Do you consider that in the last year violence in the place where you live has: (12.5)
+                0: diminished
+                1: same/no change
+                2: increased
+                3: no violent acts/crime
+                4: not sure/no response
+
+currency_type: Please indicate the currency with which you will enter the cost of the trip to the country of destination (3.19.1)
+                0: Dollars
+                1: Lempiras
+                2: Quetzals
+
+cost_to_move: Please enter the total cost of the trip to the destination country (3.19.2) TODO
+
+
+
+why_want_migration: What are the main reasons why you would like to move to another part of the country? (3.7) 
+                A family member has a job in another part of the country: 0
+                By the direct impact of a natural hazard: 1
+                Loss of land due to processes of land use change: 2
+                Deterioration of livelihoods due to natural hazards (floods, droughts, volcanic eruptions, hurricanes, plagues, etc.): 3 TODO: could group with 1&3 as climate. or economic reasons for different 
+                Domestic violence: 4
+                Threats/extortion: 5
+                not sure/no response: 6
+                other: 7
+                To become independent or start my own family: 8
+                To find a larger and/or more comfortable space for my family: 9
+                To find better job opportunities: 10
+                To seek better academic/study opportunities: 11
+
+received_financial_aid: In the last 12 months, has your household received financial aid from abroad? (3.30)
+                no: 0
+                yes: 1
+                not sure/no response: 2
+
+
+
+TODO:
+simplification methods:
+instead of bubble for each household, a bubble that eats
+try to group different choices
+filtering on filtering is hard to follow. nested questions is complicated.
+scrolly telling narrative is enough.
+TODO: site the college majors site
+
+
+Elina's feedback
+-start with the question in the beginning, better introduction: why do people. ask the question: what's the cause of migration
+    -talk about stats, why is it important to understand?
+-across 2 or 3 steps of scrolly: start with big text (two sentences), photos. then ask question.
+    -emphasize with highlights and bolds. highlight keywords and continue to highlight throughout the website.
+-Elina likes the first sentence! a lot!
+-slim zone of photos
+-titles should always be the questions
+-conclusion: come back to the question. Too much info in a paragraph. When presenting, people will not get to read all the text.
+-change timer to see if it can make the transitions smoother
+-function position()
+-scr
+-1. alphas, 2. forces, 3. collides. check everything works 4. change durations, 
+-TODO: change transition from blue to 4 groups
+-push bubbles out to side, pull it back in. will make transition a lot better.
+
+-TODO: 
+-CSV coded in to d3 and csv in section.js. 
+-change in labels: major
