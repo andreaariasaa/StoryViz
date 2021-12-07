@@ -263,11 +263,9 @@ function drawInitial(){
             .style('left', (d3.event.pageX + 10)+ 'px')
             .style('top', (d3.event.pageY - 25) + 'px')
             .style('display', 'inline-block')
-            .html(`<strong>Major:</strong> ${d.Major[0] + d.Major.slice(1,).toLowerCase()}
-                <br> <strong>Major Category:</strong> ${d.Category}
-                <br> <strong>Category:</strong> ${d.Men}
-                <br> <strong>% Female:</strong> ${Math.round(d.ShareWomen*100)}%
-                <br> <strong># Enrolled:</strong> ${d3.format(",.2r")(d.Total)}`)
+            .html(`<strong>Country:</strong> ${d.Major[0] + d.Major.slice(1,).toLowerCase()}
+                <br> <strong>Feelings about Income:</strong> ${d.Category}
+                <br> <strong>Feelings about:</strong> ${d.Men}`)
     }
 
     function mouseOut(d, i){
