@@ -1,3 +1,4 @@
+python -m http.server 9000
 TODO: most important: communicate the narrative, then communicate the data to support
 we want to see some of the bigger population still. keep track of percentage out of total population?
 grey out the dots that don't apply to the question anymore. push them to the side. don't make them disappear.
