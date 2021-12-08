@@ -476,7 +476,7 @@ function draw2(){
     createLegend(20, 50)
 }
 
-function draw3(){
+function incomeFeelBubbles(){
     let svg = d3.select("#vis").select('svg')
     clean('isMultiples')
 
@@ -669,123 +669,6 @@ function draw36() {
       .alpha(0.7).alphaDecay(0.02).restart()
 }
 
-function draw4(){
-    let svg = d3.select('#vis').select('svg')
-
-    clean('isHist')
-
-    simulation.stop()
-
-    svg.selectAll('circle')
-        .transition().duration(600).delay((d, i) => i * 2).ease(d3.easeBack)
-            .attr('r', 10)
-            .attr('cx', d => histXScale(d.Midpoint))
-            .attr('cy', d => histYScale(d.HistCol))
-            .attr('fill', d => categoryColorScale(d.Category))
-
-    let xAxis = d3.axisBottom(histXScale)
-    svg.append('g')
-        .attr('class', 'hist-axis')
-        .attr('transform', `translate(0, ${height + margin.top + 10})`)
-        .call(xAxis)
-
-    svg.selectAll('.lab-text')
-        .on('mouseout', )
-}
-
-function draw5(){
-
-    let svg = d3.select('#vis').select('svg')
-    clean('isMultiples')
-
-    simulation
-        .force('forceX', d3.forceX(d => categoriesXY[d.Category][0] + 200))
-        .force('forceY', d3.forceY(d => categoriesXY[d.Category][1] - 50))
-        .force('collide', d3.forceCollide(d => salarySizeScale(d.Median) + 4))
-
-    simulation.alpha(1).restart()
-
-    svg.selectAll('.lab-text').transition().duration(300).delay((d, i) => i * 30)
-        .text(d => `% Female: ${(categoriesXY[d][3])}%`)
-        .attr('x', d => categoriesXY[d][0] + 200)
-        .attr('y', d => categoriesXY[d][1] + 50)
-        .attr('opacity', 1)
-
-    svg.selectAll('.lab-text')
-        .on('mouseover', function(d, i){
-            d3.select(this)
-                .text(d)
-        })
-        .on('mouseout', function(d, i){
-            d3.select(this)
-                .text(d => `% Female: ${(categoriesXY[d][3])}%`)
-        })
-
-    svg.selectAll('.cat-rect').transition().duration(300).delay((d, i) => i * 30)
-        .attr('opacity', 0.2)
-        .attr('x', d => categoriesXY[d][0] + 120)
-
-    svg.selectAll('circle')
-        .transition().duration(400).delay((d, i) => i * 4)
-            .attr('fill', colorByGender)
-            .attr('r', d => salarySizeScale(d.Median))
-
-}
-
-function colorByGender(d, i){
-    if (d.ShareWomen < 0.4){
-        return 'blue'
-    } else if (d.ShareWomen > 0.6) {
-        return 'red'
-    } else {
-        return 'grey'
-    }
-}
-
-function draw6(){
-    simulation.stop()
-
-    let svg = d3.select("#vis").select("svg")
-    clean('isScatter')
-
-    svg.selectAll('.scatter-x').transition().attr('opacity', 0.7).selectAll('.domain').attr('opacity', 1)
-    svg.selectAll('.scatter-y').transition().attr('opacity', 0.7).selectAll('.domain').attr('opacity', 1)
-
-    svg.selectAll('circle')
-        .transition().duration(800).ease(d3.easeBack)
-        .attr('cx', d => shareWomenXScale(d.ShareWomen))
-        .attr('cy', d => salaryYScale(d.Median))
-
-    svg.selectAll('circle').transition(1600)
-        .attr('fill', colorByGender)
-        .attr('r', 10)
-
-    svg.select('.best-fit').transition().duration(300)
-        .attr('opacity', 0.5)
-
-}
-
-function draw7(){
-    let svg = d3.select('#vis').select('svg')
-
-    clean('isBubble')
-
-    simulation
-        .force('forceX', d3.forceX(d => enrollmentScale(d.Total)))
-        .force('forceY', d3.forceY(500))
-        .force('collide', d3.forceCollide(d => enrollmentSizeScale(d.Total) + 2))
-        .alpha(0.8).alphaDecay(0.05).restart()
-
-    svg.selectAll('circle')
-        .transition().duration(300).delay((d, i) => i * 4)
-        .attr('r', d => enrollmentSizeScale(d.Total))
-        .attr('fill', d => categoryColorScale(d.Category))
-
-    //Show enrolment axis (remember to include domain)
-    svg.select('.enrolment-axis').attr('opacity', 0.5).selectAll('.domain').attr('opacity', 1)
-
-}
-
 function draw8(){
     clean('none')
 
@@ -866,7 +749,7 @@ function allBubbles() {
 let activationFunctions = [
     allBubbles,
     draw8,
-    draw3,
+    incomeFeelBubbles,
     draw34,
     draw35,
     draw36
