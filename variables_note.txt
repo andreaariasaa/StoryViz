@@ -19,11 +19,8 @@ TODO: line 521 change variable d to change the text. look into how to change the
 ME TODO: have a backdrop image of the total 5000 grey dots in the background for the dots. plan b: small pie chart in the upper corner
 ME TODO: insert images into html text portion 
 KEILI TODO: percent female, number enrolled??
-ME TODO: plan b: barchart
-ME TODO: read through the html texgt
+ME TODO: read through the html text
 ME TODO: google search scrolling too quick and transitions breaking
-ME TODO: ask ashley about simplfying to larger bubbles 
-ME TODO: ask ashley final project due date (and if we can go on wednesday PLEASE)
 
 migrant_id: unique by responder
 
