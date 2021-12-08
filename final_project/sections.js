@@ -339,14 +339,14 @@ function drawInitial(){
                             .y(d => salaryYScale(d.y))
 
     // Axes for Scatter Plot
-    svg.append('path')
-        .transition('best-fit-line').duration(430)
-            .attr('class', 'best-fit')
-            .attr('d', lineFunction(bestFitLine))
-            .attr('stroke', 'grey')
-            .attr('stroke-dasharray', 6.2)
-            .attr('opacity', 0)
-            .attr('stroke-width', 3)
+    // svg.append('path')
+    //     .transition('best-fit-line').duration(430)
+    //         .attr('class', 'best-fit')
+    //         .attr('d', lineFunction(bestFitLine))
+    //         .attr('stroke', 'grey')
+    //         .attr('stroke-dasharray', 6.2)
+    //         .attr('opacity', 0)
+    //         .attr('stroke-width', 3)
 
     let scatterxAxis = d3.axisBottom(shareWomenXScale)
     let scatteryAxis = d3.axisLeft(salaryYScale).tickSize([width])
@@ -530,7 +530,7 @@ function incomeFeelBubbles(){
 
 }
 
-function draw34() {
+function violenceBubbles() {
   let svg = d3.select("#vis").select('svg')
   clean('isMultiples2')
 
@@ -750,7 +750,7 @@ let activationFunctions = [
     allBubbles,
     draw8,
     incomeFeelBubbles,
-    draw34,
+    violenceBubbles,
     draw35,
     draw36
 ]
@@ -771,7 +771,7 @@ let lastIndex, activeIndex = 0
 
 scroll.on('active', function(index){
     d3.selectAll('.step')
-        .transition().duration(500)
+        .transition().duration(0)
 
 
     activeIndex = index
