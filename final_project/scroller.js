@@ -1,13 +1,13 @@
 
 
 function scroller(){
-    let container = d3.select('body')
+    let container = d3.select('#cont')
     let dispatch = d3.dispatch('active', 'progress');
     let sections = d3.selectAll('.step')
     let sectionPositions
 
     let currentIndex = -1
-    let containerStart = 0;
+    let containerStart = 1;
 
     function scroll(){
         d3.select(window)
@@ -37,7 +37,7 @@ function scroller(){
     }
 
     function position() {
-        let pos = window.pageYOffset - 300 - containerStart;
+        let pos = window.pageYOffset - 800 - containerStart;
         let sectionIndex = d3.bisect(sectionPositions, pos);
         sectionIndex = Math.min(sections.size()-1, sectionIndex);
 

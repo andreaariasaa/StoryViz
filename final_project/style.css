@@ -7,6 +7,14 @@ body {
     overflow-x: hidden;
 }
 
+#opening {
+    font-size: 50pt;
+    text-align: center;
+    margin-top: 450px;
+    margin-bottom: 450px;
+    color: maroon;
+}
+
 #sections {
     position: relative;
     display: inline-block;
