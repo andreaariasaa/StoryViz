@@ -264,7 +264,7 @@ function drawInitial(){
             .style('top', (d3.event.pageY - 25) + 'px')
             .style('display', 'inline-block')
             .html(`<strong>Country:</strong> ${d.Major[0] + d.Major.slice(1,).toLowerCase()}
-                <br> <strong>Feelings about Income:</strong> ${d.Category}`)
+                `)// <br> <strong>Feelings about Income:</strong> ${d.Category}
     }
 
     function mouseOut(d, i){
@@ -522,12 +522,14 @@ function incomeFeelBubbles(){
         .attr('opacity', 1)
 
     simulation
-        .force('charge', d3.forceManyBody().strength([0.5]))
+        .force('charge', d3.forceManyBody().strength(0.1)) // decreased charge force so that bubbles settle faster
         .force('forceX', d3.forceX(d => categoriesXY[d.Category][0] + 350)) // d => categoriesXY[d.Category][0] + 350) sets location of where bubbles appear
         .force('forceY', d3.forceY(d => categoriesXY[d.Category][1] - 100)) 
-        .force('collide', d3.forceCollide(d => 6.5))
+        .force('collide', d3.forceCollide(d => 6.5)) // 2: too close together. 10: to far apart, still bounces around similarly
         .alpha(0.7).alphaDecay(0.02).restart()
-
+    // .force('charge', d3.forceManyBody().strength(0.4))
+    // .force('center', d3.forceCenter(width / 2, height / 2))
+    // .force('collision', d3.forceCollide().radius(6))
 }
 
 function violenceBubbles() {
