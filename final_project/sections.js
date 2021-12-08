@@ -339,14 +339,14 @@ function drawInitial(){
                             .y(d => salaryYScale(d.y))
 
     // Axes for Scatter Plot
-    // svg.append('path')
-    //     .transition('best-fit-line').duration(430)
-    //         .attr('class', 'best-fit')
-    //         .attr('d', lineFunction(bestFitLine))
-    //         .attr('stroke', 'grey')
-    //         .attr('stroke-dasharray', 6.2)
-    //         .attr('opacity', 0)
-    //         .attr('stroke-width', 3)
+    svg.append('path')
+        .transition('best-fit-line').duration(430)
+            .attr('class', 'best-fit')
+            .attr('d', lineFunction(bestFitLine))
+            .attr('stroke', 'grey')
+            .attr('stroke-dasharray', 6.2)
+            .attr('opacity', 0)
+            .attr('stroke-width', 3)
 
     let scatterxAxis = d3.axisBottom(shareWomenXScale)
     let scatteryAxis = d3.axisLeft(salaryYScale).tickSize([width])
@@ -523,8 +523,8 @@ function incomeFeelBubbles(){
 
     simulation
         .force('charge', d3.forceManyBody().strength([0.5]))
-        .force('forceX', d3.forceX(d => categoriesXY[d.Category][0] + 350))
-        .force('forceY', d3.forceY(d => categoriesXY[d.Category][1] - 100))
+        .force('forceX', d3.forceX(d => categoriesXY[d.Category][0] + 350)) // d => categoriesXY[d.Category][0] + 350) sets location of where bubbles appear
+        .force('forceY', d3.forceY(d => categoriesXY[d.Category][1] - 100)) 
         .force('collide', d3.forceCollide(d => 6.5))
         .alpha(0.7).alphaDecay(0.02).restart()
 
@@ -771,7 +771,7 @@ let lastIndex, activeIndex = 0
 
 scroll.on('active', function(index){
     d3.selectAll('.step')
-        .transition().duration(0)
+        .transition().duration(500)
 
 
     activeIndex = index
