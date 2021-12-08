@@ -263,11 +263,8 @@ function drawInitial(){
             .style('left', (d3.event.pageX + 10)+ 'px')
             .style('top', (d3.event.pageY - 25) + 'px')
             .style('display', 'inline-block')
-            .html(`<strong>Major:</strong> ${d.Major[0] + d.Major.slice(1,).toLowerCase()}
-                <br> <strong>Major Category:</strong> ${d.Category}
-                <br> <strong>Category:</strong> ${d.Men}
-                <br> <strong>% Female:</strong> ${Math.round(d.ShareWomen*100)}%
-                <br> <strong># Enrolled:</strong> ${d3.format(",.2r")(d.Total)}`)
+            .html(`<strong>Country:</strong> ${d.Major[0] + d.Major.slice(1,).toLowerCase()}
+                <br> <strong>Feelings about Income:</strong> ${d.Category}`)
     }
 
     function mouseOut(d, i){
@@ -467,7 +464,7 @@ function draw2(){
         .attr('cy', (d, i) => categoriesXY[d.Category][1] - 50)
 
     simulation
-        .force('charge', d3.forceManyBody().strength([2]))
+        .force('charge', d3.forceManyBody().strength(0.03))
         .force('forceX', d3.forceX(d => categoriesXY[d.Category][0] + 200))
         .force('forceY', d3.forceY(d => categoriesXY[d.Category][1] - 50))
         .force('collide', d3.forceCollide(d => 5))
@@ -849,7 +846,7 @@ function randomIntFromInterval(min, max) { // min and max included
 //     .force('collide', d3.forceCollide(d => 6.5))
 //     .alpha(0.7).alphaDecay(0.02).restart()
 
-function draw0() {
+function allBubbles() {
   clean('none')
   let svg = d3.select('#vis').select('svg')
   svg.selectAll('circle')
@@ -867,7 +864,7 @@ function draw0() {
 //Will be called from the scroller functionality
 
 let activationFunctions = [
-    draw0,
+    allBubbles,
     draw8,
     draw3,
     draw34,
