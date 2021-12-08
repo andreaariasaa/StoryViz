@@ -26,7 +26,7 @@ ME TODO: google search scrolling too quick and transitions breaking
 migrant_id: unique by responder
 
 
-INCLUDE:
+INCLUDED:
 household_income_feeling: Which of these statements is closest to how you feel about your household income these days? (13.5)
                 0: living comfortably
                 1: surviving
@@ -34,26 +34,26 @@ household_income_feeling: Which of these statements is closest to how you feel a
                 3: in a very critical situation TODO: if certain categories have too little data points, combine with similar category
                 4: not sure/no response
 
-INCLUDE:
+INCLUDED:
 migration_want: Ideally, if they had the opportunity, would they like to move permanently or for a long period to another country? (3.1)
                 representation:
                 no: 0
                 yes: 1
                 not sure/no response: 2
 
-INCLUDE:
+INCLUDED:
 planning_to_move12: Are you planning to move to another country in the next 12 months? (3.3)
                 no: 0
                 yes: 1
                 not sure/no response: 2
 
-INCLUDE:
+TODO INCLUDE:
 prepared_to_move: Have you made any preparation to move to another country? (3.5)
                 no: 0
                 yes: 1
                 not sure/no response: 2
 
-INCLUDE:
+TODO INCLUDE:
 why_no_leave: (total 7 people responded no to 3.5) What are the main reasons why you have not planned to move to another part of the country in the next 12 months? (multiple choice, total response:7)? (3.4)
                 num(Fear of insecurity): 1
                 num(Fear of COVID): 2
