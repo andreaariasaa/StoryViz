@@ -16,13 +16,19 @@ body {
     line-height: 50pt;
 }
 
+#callout {
+    text-align: center;
+    color: maroon;
+    font-weight: bolder;
+}
+
 #sections {
     position: relative;
     display: inline-block;
-    width: 400px;
+    width: 600px;
     top: 60px;
     z-index: 90;
-    margin-right: 50px;
+    margin-right: 25px;
 }
 
 .categoryLegend {
@@ -47,8 +53,14 @@ h1, h2 {
     line-height: 32px;
 }
 
+h2 {
+    font-size: 24pt;
+    line-height: 28pt;
+}
+
 h1 {
-    font-size: 35px;
+    font-size: 40pt;
+    line-height: 45pt;
 }
 
 strong {
@@ -108,6 +120,7 @@ a {
     text-decoration: none;
 }
 
-img {
-    display: none;
+p {
+    font-size: 18pt;
+    line-height: 27pt;
 }
